@@ -121,7 +121,6 @@ namespace Színkitaláló
             } while (lenyomott.Key != ConsoleKey.Enter);
             if (kivalasztott == 0)
             {
-                start();
                 guesser();
             }
             else
