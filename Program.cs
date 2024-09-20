@@ -43,16 +43,16 @@ namespace Színkitaláló
                 Console.WriteLine(chosen_colors[i] + " ");
             }
 
-            List<string> guessed_colors = new List<string>();
-
             bool win = false;
-            int pontok = 0;
-            while (win != true)
+
+            while (!win)
             {
+                List<string> guessed_colors = new List<string>();
+                int pontok = 0; // Pontok nullázása minden próbálkozás előtt
                 int k = 0;
+
                 while (k != chosen_colors.Count)
                 {
-
                     Console.Write($"Add meg a(z) {k + 1}. színt: ");
                     string num = Console.ReadLine();
                     guessed_colors.Add(num);
@@ -70,7 +70,7 @@ namespace Színkitaláló
                         }
                         else
                         {
-                            Console.WriteLine($"{i+1}. szín benne van csak rossz helyen");
+                            Console.WriteLine($"{i + 1}. szín benne van, csak rossz helyen");
                         }
                     }
                     else
@@ -78,19 +78,19 @@ namespace Színkitaláló
                         Console.WriteLine($"{i + 1}. szín nem talált");
                     }
                 }
-                if ( pontok == chosen_colors.Count )
+
+                if (pontok == chosen_colors.Count)
                 {
                     win = true;
-                    ujjatek();
+                    ujjatek(); // Nyertes esetén tovább lép az új játékra
                 }
-                guessed_colors.Clear();
-                chosen_colors.Clear();
             }
         }
+
         static void ujjatek()
         {
             Console.Clear();
-            
+
             int kivalasztott = 0;
             ConsoleKeyInfo lenyomott;
             string[] opcio = { "Új játék", "Kilépés" };
