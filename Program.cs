@@ -137,7 +137,6 @@ namespace Színkitaláló
 
         static void Main(string[] args)
         {
-            start();
             guesser();
         }
     }
