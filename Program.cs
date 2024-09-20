@@ -38,10 +38,6 @@ namespace Színkitaláló
         static void guesser()
         {
             List<string> chosen_colors = start();
-            for (int i = 0; i < chosen_colors.Count; i++)
-            {
-                Console.WriteLine(chosen_colors[i] + " ");
-            }
 
             bool win = false;
 
