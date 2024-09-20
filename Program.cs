@@ -48,7 +48,7 @@ namespace Színkitaláló
             while (!win)
             {
                 List<string> guessed_colors = new List<string>();
-                int pontok = 0; // Pontok nullázása minden próbálkozás előtt
+                int pontok = 0;
                 int k = 0;
 
                 while (k != chosen_colors.Count)
@@ -82,7 +82,7 @@ namespace Színkitaláló
                 if (pontok == chosen_colors.Count)
                 {
                     win = true;
-                    ujjatek(); // Nyertes esetén tovább lép az új játékra
+                    ujjatek();
                 }
             }
         }
